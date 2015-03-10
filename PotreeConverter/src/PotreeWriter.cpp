@@ -51,8 +51,8 @@ string PotreeWriterNode::hierarchyPath(){
 		path = "";
 	}else{
 		path = "";
-		for(int i = 0; i < numParts; i++){
-			path += "r" + indices.substr(0, i*hierachyStepSize) + "/";
+		for(int i = 0; i < indices.length(); i++){
+			path += indices.substr(i,1)+ "/";
 		}
 	}
 

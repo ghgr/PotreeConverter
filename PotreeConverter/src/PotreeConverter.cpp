@@ -6,7 +6,6 @@
 #include "PotreeConverter.h"
 #include "stuff.h"
 #include "LASPointReader.h"
-#include "PTXPointReader.h"
 #include "PotreeException.h"
 #include "PotreeWriter.h"
 #include "LASPointWriter.hpp"
@@ -53,7 +52,6 @@ PointReader *PotreeConverter::createPointReader(string path){
 	if(boost::iends_with(path, ".las") || boost::iends_with(path, ".laz")){
 		reader = new LASPointReader(path);
 	}else if(boost::iends_with(path, ".ptx")){
-		reader = new PTXPointReader(path);
 	}else if(boost::iends_with(path, ".ply")){
 		reader = new PlyPointReader(path);
 	}else if(boost::iends_with(path, ".xyz")){

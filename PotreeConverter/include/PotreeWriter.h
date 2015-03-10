@@ -115,7 +115,7 @@ public:
 		numAccepted = 0;
 		pointsInMemory = 0;
 		pointsInMemoryLimit = 1*1000*1000;
-		hierarchyStepSize = 5;
+		hierarchyStepSize = 1;
 
 		fs::remove_all(workDir + "/hierarchy");
 
